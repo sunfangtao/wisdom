@@ -8,4 +8,5 @@ import org.androidannotations.annotations.EActivity;
 @EActivity(R.layout.activity_index)
 public class IndexActivity extends BActivity {
 
+
 }
