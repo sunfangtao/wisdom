@@ -8,4 +8,7 @@ import org.androidannotations.annotations.EActivity;
 @EActivity(R.layout.activity_setting)
 public class SettingActivity extends BActivity {
 
+    private void init(){
+
+    }
 }
