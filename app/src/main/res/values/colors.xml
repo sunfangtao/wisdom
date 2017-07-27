@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <!-- 控件颜色 -->
+    <!-- 主色调-->
+    <color name="mainViewColor">#FF0000</color>
+    <color name="mainViewColorDisEnable">#4C000000</color>
+    <color name="viewColorWhite">#FFFFFF</color>
+    <color name="viewColorGray">#F7F7F7</color>
+    <color name="viewColorLightGray">#E5E5E5</color>
+    <color name="viewColorDeepGray">#DDDDDD</color>
+    <color name="viewColorBlack15">#26000000</color>
+    <color name="viewColorBlack20">#33000000</color>
+    <color name="viewColorBlue">#00A5F5</color>
+    <color name="viewColorOrange">#F9E1D7</color>
+
+    <!-- 字体颜色 -->
+    <!-- 主色调-->
+    <color name="mainTextColor">#343434</color>
+    <color name="textColorBlue">#009CE7</color>
+    <color name="textColorGray">#E5E5E5</color>
+    <color name="textColorDeepGray">#DDDDDD</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textColorOrange">#FE6E47</color>
 </resources>

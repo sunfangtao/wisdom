@@ -14,8 +14,6 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
-import cn.sft.util.Util;
-
 @EActivity(R.layout.activity_welcome)
 public class WelcomeActivity extends BActivity {
 
@@ -32,7 +30,7 @@ public class WelcomeActivity extends BActivity {
 
     @Override
     protected void afterViews() {
-        Util.print("shsh");
+
     }
 
     @Click(R.id.welcome_account_btn)

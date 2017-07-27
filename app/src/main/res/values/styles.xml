@@ -15,4 +15,32 @@
         <item name="android:textSize">18sp</item> <!--  搞掂字体大小-->>
     </style>
 
+    <style name="Index_BottomLayout_RadioButton_Style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@drawable/index_bottom_radiobutton_text_bk</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!-- 我的界面Label样式 -->
+    <style name="My_TextView">
+        <item name="android:background">@color/textColorWhite</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+        <item name="drawableWidth">16dp</item>
+        <item name="drawableHeight">16dp</item>
+    </style>
+
 </resources>

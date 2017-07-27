@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drawabletext="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.sft.view.DrawableCenterTextView
+        android:id="@+id/fragment_my_car_rental_noticeTv"
+        style="@style/My_TextView"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:drawableRight="@mipmap/ic_launcher_round"
+        android:text="sss"
+        drawabletext:drawableTextCenter="false" />
+
+    <include layout="@layout/black15_devider" />
+
+    <cn.sft.view.DrawableCenterTextView
+        android:id="@+id/fragment_my_personcentertv"
+        style="@style/My_TextView"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:drawableRight="@mipmap/ic_launcher_round"
+        android:text="sss"
+        drawabletext:drawableTextCenter="false" />
+
+    <include layout="@layout/black15_devider" />
+
+    <cn.sft.view.DrawableCenterTextView
+        android:id="@+id/fragment_my_personcentert"
+        style="@style/My_TextView"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:drawableRight="@mipmap/ic_launcher_round"
+        android:text="sss"
+        drawabletext:drawableTextCenter="false" />
+
+    <cn.sft.view.DrawableCenterTextView
+        android:id="@+id/fragment_my_setting_tv"
+        style="@style/My_TextView"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/section_bkground"
+        android:drawableLeft="@mipmap/ic_launcher_round"
+        android:drawableRight="@mipmap/ic_launcher_round"
+        android:text="设置"
+        drawabletext:drawableTextCenter="false" />
+</LinearLayout>
