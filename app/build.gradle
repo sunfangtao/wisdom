@@ -67,5 +67,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
     compile 'cn.bingoogolapple:bga-zbar:1.1.7@aar'
+    compile 'q.rorbin:badgeview:1.1.2'
     testCompile 'junit:junit:4.12'
 }

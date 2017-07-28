@@ -33,22 +33,24 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
 
     @Override
     protected void afterViews() {
-
         setRBDrawableSize(messageRB, 50, 50);
         initData(savedInstanceState);
     }
 
     private void initData(Bundle savedInstanceState) {
 
+        Util.print("initData");
         bottomGroup.setOnCheckedChangeListener(this);
 
         if (savedInstanceState == null) {
-            if (messageFragment == null) {
-                messageFragment = new MessageFragment_();
-            }
-            if (myFragment == null) {
-                myFragment = new MyFragment_();
-            }
+
+            Bundle bundle = new Bundle();
+            bundle.putString("key", "value");
+            messageFragment = new MessageFragment_();
+            myFragment = new MyFragment_();
+
+            messageFragment.setArguments(bundle);
+            myFragment.setArguments(bundle);
 
             FragmentManager fm = getFragmentManager();
             FragmentTransaction transaction = fm.beginTransaction();
@@ -56,7 +58,7 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
             transaction.add(R.id.index_fragment_content, myFragment, "myFragment");
             transaction.commit();
 
-            messageRB.performClick();
+            messageRB.setChecked(true);
         }
     }
 
@@ -94,7 +96,10 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
 
     @Override
     protected void afterRestoreInstanceState(Bundle bundle) {
+        Util.print("afterRestoreInstanceState");
         messageFragment = (MessageFragment) getFragmentManager().findFragmentByTag("messageFragment");
         myFragment = (MyFragment) getFragmentManager().findFragmentByTag("myFragment");
+
+        Util.print("i="+myFragment.getI());
     }
 }

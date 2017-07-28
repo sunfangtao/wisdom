@@ -41,5 +41,6 @@
         android:drawableLeft="@mipmap/ic_launcher_round"
         android:drawableRight="@mipmap/ic_launcher_round"
         android:text="设置"
+        android:freezesText="true"
         drawabletext:drawableTextCenter="false" />
 </LinearLayout>
