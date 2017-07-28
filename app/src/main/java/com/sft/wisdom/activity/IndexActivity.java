@@ -33,13 +33,13 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
 
     @Override
     protected void afterViews() {
+
         setRBDrawableSize(messageRB, 50, 50);
         initData(savedInstanceState);
     }
 
     private void initData(Bundle savedInstanceState) {
 
-        Util.print("initData");
         bottomGroup.setOnCheckedChangeListener(this);
 
         if (savedInstanceState == null) {
@@ -58,14 +58,12 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
             transaction.add(R.id.index_fragment_content, myFragment, "myFragment");
             transaction.commit();
 
-            messageRB.setChecked(true);
+            messageRB.performClick();
         }
     }
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-        Util.print("onCheckedChanged");
 
         FragmentManager fm = getFragmentManager();
         // 开启Fragment事务
@@ -76,6 +74,7 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
             case R.id.index_bottom_message_rbtn:
                 transaction.show(messageFragment);
                 break;
+            // TODO 通讯录Fragment增加
             case R.id.index_bottom_my_btn:
                 transaction.show(myFragment);
                 break;
@@ -101,5 +100,6 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
         myFragment = (MyFragment) getFragmentManager().findFragmentByTag("myFragment");
 
         Util.print("i="+myFragment.getI());
+        // TODO 通讯录Fragment恢复
     }
 }
