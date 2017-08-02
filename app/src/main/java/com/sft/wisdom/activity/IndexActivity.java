@@ -2,6 +2,7 @@ package com.sft.wisdom.activity;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import com.sft.wisdom.fragment.MessageFragment;
 import com.sft.wisdom.fragment.MessageFragment_;
 import com.sft.wisdom.fragment.MyFragment;
 import com.sft.wisdom.fragment.MyFragment_;
+import com.sft.wisdom.service.HelloService;
 
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
@@ -36,6 +38,14 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
 
         setRBDrawableSize(messageRB, 50, 50);
         initData(savedInstanceState);
+
+        startService(new Intent(this, HelloService.class).putExtra("value", "sss"));
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        startService(new Intent(this, HelloService.class).putExtra("value", "aaa"));
     }
 
     private void initData(Bundle savedInstanceState) {
@@ -98,8 +108,7 @@ public class IndexActivity extends BActivity implements RadioGroup.OnCheckedChan
         Util.print("afterRestoreInstanceState");
         messageFragment = (MessageFragment) getFragmentManager().findFragmentByTag("messageFragment");
         myFragment = (MyFragment) getFragmentManager().findFragmentByTag("myFragment");
-
-        Util.print("i="+myFragment.getI());
         // TODO 通讯录Fragment恢复
     }
+
 }

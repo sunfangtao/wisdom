@@ -68,5 +68,6 @@ dependencies {
     compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
     compile 'cn.bingoogolapple:bga-zbar:1.1.7@aar'
     compile 'q.rorbin:badgeview:1.1.2'
+    compile 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.3.0'
     testCompile 'junit:junit:4.12'
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="isAutoInfinite" format="boolean" />
+        <!-- 指针属性 -->
+        <attr name="trickColor" format="color" />
+        <attr name="trickWidth" format="dimension" />
+        <attr name="trickHeight" format="dimension" />
+        <attr name="trickTextColor" format="color" />
+        <attr name="trickTextSize" format="dimension" />
+        <attr name="trickInterval" format="dimension" />
+        <!-- 背景线属性 -->
+        <attr name="backgroundLineColor" format="color" />
+        <attr name="backgroundLineWidth" format="dimension" />
+        <!-- 滑块属性 -->
+        <attr name="thumbStartColor" format="color" />
+        <attr name="thumbEndColor" format="color" />
+        <attr name="thumbLineWidth" format="dimension" />
+        <attr name="thumbDrawableWidth" format="dimension" />
+        <attr name="thumbDrawableHeight" format="dimension" />
+        <attr name="thumbStartDrawable" format="reference" />
+        <attr name="thumbEndDrawable" format="reference" />
+        <!-- 指示器属性 -->
+        <attr name="indicatorStartColor" format="color" />
+        <attr name="indicatorEndColor" format="color" />
+        <attr name="indicatorArrowHeight" format="dimension" />
+        <attr name="indicatorAroundCorner" format="dimension" />
+        <attr name="indicatorInterval" format="dimension" />
+        <attr name="indicatorTextColor" format="color" />
+        <attr name="indicatorTextSize" format="dimension" />
+        <attr name="indicatorTextPadding" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -15,6 +15,9 @@
             android:name="appId"
             android:value="${APP_ID}" />
 
+        <service android:name=".service.HelloService"
+            android:exported="false"/>
+
         <activity android:name=".base.BActivity_" />
         <activity android:name=".activity.WelcomeActivity_">
             <intent-filter>

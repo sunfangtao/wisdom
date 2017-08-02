@@ -8,14 +8,19 @@ import android.widget.TextView;
 
 import com.sft.wisdom.R;
 import com.sft.wisdom.base.BActivity;
+import com.sft.wisdom.view.RangeSeekBar;
 
 import org.androidannotations.annotations.CheckedChange;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
+import cn.sft.util.Util;
+
+import static java.lang.Float.NaN;
+
 @EActivity(R.layout.activity_welcome)
-public class WelcomeActivity extends BActivity {
+public class WelcomeActivity extends BActivity implements RangeSeekBar.RangeSeekBarChangedListener {
 
     @ViewById
     ImageView welcome_logo_im;
@@ -56,5 +61,15 @@ public class WelcomeActivity extends BActivity {
     @Override
     protected void afterRestoreInstanceState(Bundle bundle) {
         updateBtnEnableState(welcome_protocol_ck.isChecked());
+    }
+
+    @Override
+    public void rangeSeekBarValueChanged(float leftValue, float rightValue) {
+        Util.print("leftValue=" + leftValue + " rightValue=" + rightValue);
+        if (rightValue == NaN) {
+            welcome_name_tv.setText(leftValue + "~" + "不限");
+        } else {
+            welcome_name_tv.setText(leftValue + "~" + rightValue);
+        }
     }
 }
